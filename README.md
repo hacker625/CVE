@@ -1,7 +1,7 @@
 # EaseUS MobiMover 6.0.5 Build 21620 - Insecure Files and Folders Permissions
 MobiMoverUILaunch.exe  suffers from an elevation of privileges vulnerability which can be used by an "Authenticated User" to modify the executable file of the service with a binary of his choice under bin folder . The vulnerability exist due to weak set of permissions being granted to the "Authenticated Users Group" which grants the (M) Flag aka "Modify Privilege"
 
-
+![alt text](https://i.imgur.com/X4VIUbq.png)
 
 Vendor Homepage: https://www.easeus.com/ <br/>
 Software Link : https://down.easeus.com/product/mobimover_trial_setup<br/>
