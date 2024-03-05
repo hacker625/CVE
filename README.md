@@ -9,6 +9,7 @@ POC video: https://www.youtube.com/watch?v=FR4cQm-z4Gw
 
 
 #PoC
+```
 C:\Users\creatigon>accesschk -uwvqd "C:\Program Files (x86)\EaseUS\EaseUS MobiMover\bin"
 
 Accesschk v6.15 - Reports effective permissions for securable objects
@@ -25,3 +26,4 @@ C:\Program Files (x86)\EaseUS\EaseUS MobiMover\bin
         FILE_ALL_ACCESS
   RW BUILTIN\Administrators
         FILE_ALL_ACCESS
+```
